@@ -1,0 +1,36 @@
+<div class="container p-3">
+  <h3 class="text-white p-2 mb-3 mx-1">Cadastro de Carros</h3>
+  <div class="row mx-1">
+    <div class="col">
+      <div class="form-floating">
+        <input type="text" class="form-control" [(ngModel)]="car.name" id="floatingName" placeholder="Nomefoda">
+        <label for="floatingName">Nome</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" [(ngModel)]="car.assembler" class="form-control" id="floatingAssembler" placeholder="Montadora">
+        <label for="floatingAssembler">Montadora</label>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-1">
+    <div class="col">
+      <div class="form-floating">
+        <input type="number" [(ngModel)]="car.price" class="form-control" id="floatingPrice" placeholder="100.00">
+        <label for="floatingPrice">Preço</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" [(ngModel)]="car.year" id="floatingYear" placeholder="Enter Price">
+        <label for="floatingYear">Ano</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-success" type="submit">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

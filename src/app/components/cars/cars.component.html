@@ -1,0 +1,23 @@
+<app-car [car]="car"></app-car>
+<div class="container p-2">
+  <table class="table table-dark table-hover m-3">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Montadora</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ano</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let car of cars">
+        <td>{{car.id}}</td>
+        <td>{{car.name}}</td>
+        <td>{{car.assembler}}</td>
+        <td>{{car.price | currency: 'BRL'}}</td>
+        <td>{{car.year}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
