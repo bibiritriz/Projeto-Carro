@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Car } from '../../Car';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-car',
@@ -10,6 +10,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './car.component.css'
 })
 export class CarComponent {
+
   @Input()
-  car : Car = {} as Car;
+  car: Car = {} as Car;
+
+  @Output()
+  saveEmitter = new EventEmitter();
+
+  save() {
+    this.saveEmitter.emit();
+  }
 }
